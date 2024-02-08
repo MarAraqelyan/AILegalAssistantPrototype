@@ -29,19 +29,31 @@ pip install
 ## Installation
 
 ### Clone the repository
+```bash
 git clone https://github.com/your-username/AILegalAssistantPrototype.git
+```
 
 ### Navigate to the project directory
+```bash
 cd AILegalAssistantPrototype
+```
 
 ### Create a virtual environment
+```bash
 virtualenv venv
+```
 
 ### Activate the virtual environment
 #### On Windows
+```bash
 venv\Scripts\activate
+```
 #### On macOS/Linux
+```bash
 source venv/bin/activate
+```
 
 ### Run the Flask application
+```bash
 python app.py
+```
