@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AILegalAssistantPrototype</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <form method="post" action="/search">
+            <!-- Input field for the search term -->
+            <input type="text" name="search_term" placeholder="Enter your search">
+            <!-- Submit button to trigger the search -->
+            <button type="submit">Search</button>
+        </form>
+
+        {% if search_term and search_result is not false %}
+        <h2>{{ search_result }}</h2>
+        {% elif search_term %}
+        <p>No result found for '{{ search_term }}'</p>
+        {% endif %}
+    </body>
+</html>
